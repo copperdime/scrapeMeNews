@@ -30,13 +30,13 @@ app.use(express.static("public"));
 
 // Database configuration with mongoose
 // var mongoDB = 'mongodb://copperdime:myth1234@ds133094.mlab.com:33094/nprscrape';
-var mongoDB = ' mongodb://heroku_717xl8jd:rpes15guihj49ojbk1l2qpjcot@ds115671.mlab.com:15671/heroku_717xl8jd';
-// var mongoDB = 'mongodb://localhost/scrapingtestmongoose'
-mongoose.connect(mongoDB);
+// var mongoDB = 'mongodb://heroku_x01rlth4:hg0purcetah5njmjfcelhdkjvu@ds135234.mlab.com:35234/heroku_x01rlth4';
+// // var mongoDB = 'mongodb://localhost/scrapingtestmongoose'
+// mongoose.connect(mongoDB);
 
 
 // mongoose.connect("mongodb://copperdime:myth1234@ds133094.mlab.com:33094/nprscrape");
-var db = mongoose.connection;
+var db = mongoose.connect("mongodb://heroku_x01rlth4:hg0purcetah5njmjfcelhdkjvu@ds135234.mlab.com:35234/heroku_x01rlth4").connection;
 
 // Show any mongoose errors
 db.on("error", function(error) {
